@@ -1,0 +1,262 @@
+/*@start nav*/
+#nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: black;
+}
+
+#nav a {
+    text-decoration: none;
+}
+
+#nav ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+@media only screen and (min-width: 1024px){
+    #nav {
+        height: 70px;
+    }
+}
+/*@end nav*/
+
+
+
+/*@start nav grid*/
+#nav .grid {
+    display: flex;
+    justify-content: space-between;
+}
+/*@end nav grid*/
+
+
+
+
+/*@start branding-logo*/
+.branding {
+    height: 60px;
+}
+
+.branding-logo {
+    padding: 0 .5rem;
+    width: auto;
+    z-index: 50;
+}
+
+@media only screen and (min-width: 1024px){
+    .branding {
+        height: 70px;
+    }
+
+    .branding-logo {
+        padding-left: 1.5rem;
+        height: 70px;
+    }
+}
+/*@end branding-logo*/
+
+
+
+
+/*@start nav list*/
+.primary-nav-list {
+    font-size: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    transition: 150ms ease-in-out;
+    background-color: black;
+    text-align: left;
+    z-index: 80;
+}
+
+.menu-checkbox:checked ~ .primary-nav-list {
+    left: 0;
+}
+
+.primary-nav-list > li {
+    margin-inline-start: 0;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.primary-nav-list > li:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.primary-nav-list > li:first-child {
+    margin-top: 20vh;
+}
+
+@media only screen and ( min-width: 1024px ) {
+    .primary-nav-list {
+        display: inline;
+        position: relative;
+        height: auto;
+        width: auto;
+        left: 0;
+        background-color: transparent;
+        text-align: right;
+    }
+
+    .primary-nav-list > li {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 1.5rem 2rem 0 2rem;
+    }
+
+    .primary-nav-list > li:first-child {
+        margin-top: 0;
+    }
+}
+/*@end nav list*/
+
+
+
+
+/* @start nav link */
+/*use as: ul. nav-list > li > div .nav-link > a (actual link)*/
+.primary-nav-link {
+    display: block;
+}
+
+.primary-nav-link:hover {
+    cursor: pointer;
+}
+
+.primary-nav-link.selected .primary-nav-title {
+    color: limegreen;
+}
+/* @end nav link */
+
+
+
+
+
+/* @start nav link title */
+.primary-nav-title {
+    display: block;
+    margin: 0;
+    position: relative;
+    font-size: 2rem;
+    color: white;
+}
+
+.primary-nav-title:hover,
+.primary-nav-title:focus,
+.primary-nav-title:focus-within,
+.primary-nav-title:active,
+.primary-nav-title.selected {
+    color: red;
+}
+
+@media only screen and (min-width: 1024px) {
+    .primary-nav-title {
+        font-size: 1.15rem;
+        background: none;
+    }
+}
+/* @end nav link title */
+
+
+
+
+/* @start nav toggle */
+.nav-toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 1rem;
+    /*right must match .content padding*/
+    right: 1.25rem;
+    padding: 4px 0 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/*the lines that actually make up the hamburger*/
+.nav-toggle > span {
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin: 0 0 8px;
+    display: block;
+}
+
+.top-line,
+.bottom-line {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 94% 6%;
+    -ms-transform-origin: 94% 6%;
+    transform-origin: 94% 6%;
+    -webkit-transition: transform 400ms;
+    -moz-transition: transform 400ms;
+    -o-transition: transform 400ms;
+    transition: transform 400ms;
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav-toggle {
+        display: none;
+    }
+}
+/* @end nav toggle */
+
+
+
+
+
+/*@start CSS checkbox menu nav toggle*/
+/*change the hamburger icon when opening and closing mobile menu with CSS checkboxes*/
+.menu-checkbox:checked + .nav-toggle .top-line {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 94% 6%;
+    -ms-transform-origin: 94% 6%;
+    transform-origin: 94% 6%;
+}
+
+.middle-line {
+    opacity: 1;
+    transition: .5s;
+}
+
+.menu-checkbox:checked + .nav-toggle .middle-line {
+    opacity: 0;
+    transition: 200ms;
+}
+
+.menu-checkbox:checked + .nav-toggle .bottom-line {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100%;
+    -ms-transform-origin: 100%;
+    transform-origin: 100%;
+}
+/*@end CSS checkbox menu nav toggle*/
+
+
+
+
+
+/*@start CSS checkboxes mobile menu*/
+.nav-link-checkbox,
+.menu-checkbox {
+    display: none;
+}
+/*@end CSS checkboxes mobile menu*/

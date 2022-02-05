@@ -1,0 +1,37 @@
+/*@start body*/
+body {
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+@media only screen and (min-width: 768px){
+    body {
+        font-size: 16px;
+    }
+}
+/*@end body*/
+
+
+
+/*@start p*/
+/*a bit more space between lines make it easier to read any text*/
+p {
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+/*@end p*/
+
+
+
+
+
+/*@start alignments*/
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+/*@end alignments*/

@@ -1,0 +1,15 @@
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: transparent;
+}
+
+.form-group {
+    margin: 2rem 0;
+}

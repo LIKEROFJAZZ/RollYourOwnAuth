@@ -1,0 +1,21 @@
+/*@start section*/
+section {
+    display: block;
+    height: auto;
+}
+/*@end section*/
+
+
+
+
+/*@start section content*/
+.section-content {
+    padding: 4rem 0;
+}
+
+@media only screen and (min-width: 1024px){
+    .section-content {
+        padding: 6rem 0;
+    }
+}
+/*@end section content*/
