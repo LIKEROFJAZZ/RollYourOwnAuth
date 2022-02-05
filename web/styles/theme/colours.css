@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #f4f4f4;
+    --secondary-color: #222;
+    --tertiary-color: red;
+    --quaternary-color: blue;
+    --quinary-color: green;
+    --senary-color: purple;
+}
+
+/*@start themes*/
+.theme-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.theme-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.theme-tertiary {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.theme-quaternary {
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+}
+
+.theme-quinary {
+    background-color: var(--quinary-color);
+    color: var(--primary-color);
+}
+
+.theme-senary {
+    background-color: var(--senary-color);
+    color: var(--primary-color);
+}
+/*@end themes*/

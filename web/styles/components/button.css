@@ -1,0 +1,35 @@
+.btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .25rem .75rem;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width: 768px ){
+    .btn {
+        padding: .25rem 1.25rem;
+    }
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.btn.btn-primary {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus,
+.btn.btn-primary:focus-within {
+    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
