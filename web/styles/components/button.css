@@ -9,6 +9,12 @@
     vertical-align: middle;
 }
 
+.btn:active,
+.btn:focus,
+.btn:focus-within {
+    outline: none;
+}
+
 @media only screen and (min-width: 768px ){
     .btn {
         padding: .25rem 1.25rem;
@@ -32,4 +38,10 @@
     border-color: var(--secondary-color);
     background-color: var(--primary-color);
     color: var(--secondary-color);
+}
+
+.btn.btn-primary.disabled {
+    background-color: dimgrey;
+    color: darkgrey;
+    pointer-events: none;
 }

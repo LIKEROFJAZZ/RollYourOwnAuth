@@ -8,9 +8,7 @@
 </head>
 
 <body>
-
     <header>
-
         <section>
             <div class="section-content">
                 <div class="grid">
@@ -22,7 +20,6 @@
                 </div>
             </div>
         </section>
-
     </header>
 
     <main>
@@ -32,13 +29,20 @@
                     <div class="column">
                         <div class="column three">
                             <div class="content">
-                                <form>
+                                <form id="form">
                                     <div class="form-group">
-                                        <label for="login-input">Email:</label>
-                                        <input type="email" id="login-input"/>
+                                        <label for="email-input">Email:</label>
+                                        <input type="email"
+                                               tabindex="0"
+                                               autocomplete="off"
+                                               placeholder="Please enter an email address"
+                                               id="email-input"/>
                                     </div>
 
-                                    <a role="button" type="submit" class="btn btn-primary">Submit</a>
+                                    <button role="button"
+                                            tabindex="0"
+                                            id="submit-btn"
+                                            class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
@@ -47,53 +51,6 @@
             </div>
         </section>
     </main>
-
-<!--    <footer></footer>-->
-<!--    <nav class="nav" id="nav">-->
-<!--        <div class="grid">-->
-<!--            <div class="column">-->
-<!--                <div class="branding">-->
-<!--                    <a href="" class="branding-logo">-->
-<!--&lt;!&ndash;                        <img src="" class="branding-logo" alt=""/>&ndash;&gt;-->
-<!--                        branding-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="column align-right">-->
-<!--                <input type="checkbox" id="menu-checkbox" class="menu-checkbox">-->
-<!--                <label for="menu-checkbox" class="nav-toggle" id="nav-toggle">-->
-<!--                    <span class="top-line"></span>-->
-<!--                    <span class="middle-line"></span>-->
-<!--                    <span class="bottom-line"></span>-->
-<!--                </label>-->
-
-<!--                <ul class="primary-nav-list" id="nav-list">-->
-<!--                    <li>-->
-<!--                        <div class="primary-nav-link">-->
-<!--                            <a href="" title="" class="selected primary-nav-title">-->
-<!--                                LINK A-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="primary-nav-link">-->
-<!--                            <a href="" title="" class="primary-nav-title">-->
-<!--                                LINK B-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="primary-nav-link">-->
-<!--                            <a href="" title="" class="primary-nav-title">-->
-<!--                                LINK C-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </nav>-->
 </body>
 </html>
 
