@@ -2,7 +2,8 @@ const emailInput = document.getElementById('email-input');
 const submitBtn = document.getElementById('submit-btn');
 const form = document.getElementById('form');
 
-const host = window.location.protocol + window.location.host;
+const host = 'http://127.0.0.1:8001';
+// const host = window.location.protocol + window.location.host;
 
 let isValid = false;
 
@@ -23,7 +24,7 @@ submitForm = ( e ) => {
     // prevent the browser from reloading page on submit
     e.preventDefault();
     // post request to specified endpoint and data we want to send
-    post( "/submit-email", { email } );
+    post( "/email", { email } );
 };
 
 /**
@@ -66,7 +67,7 @@ formIsValid = () => {
  */
 post = ( url, data ) => {
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", `${host}/${url}` );
+    xhr.open("POST", `${host}${url}` );
 
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -76,7 +77,7 @@ post = ( url, data ) => {
             console.log(xhr.responseText);
         }};
 
-    xhr.send( data );
+    xhr.send( JSON.stringify(data) );
 };
 
 // Event listeners
