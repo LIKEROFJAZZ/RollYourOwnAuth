@@ -1,4 +1,4 @@
-# Running in Docker container
+# Running in Docker
 
 In root directory of project:
 ```
