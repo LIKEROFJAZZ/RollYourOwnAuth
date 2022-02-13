@@ -2,8 +2,8 @@ const emailInput = document.getElementById('email-input');
 const submitBtn = document.getElementById('submit-btn');
 const form = document.getElementById('form');
 
-// const host = 'http://127.0.0.1:64596';
-const host = window.location.protocol + window.location.host;
+const host = 'http://127.0.0.1:8001';
+// const host = window.location.protocol + window.location.host;
 
 let isValid = false;
 
@@ -23,9 +23,8 @@ submitForm = ( e ) => {
     const email = emailInput.value;
     // prevent the browser from reloading page on submit
     e.preventDefault();
-    console.log(host);
     // post request to specified endpoint and data we want to send
-    post( "/email", { email } );
+    post( "/submit-email", { email } );
 };
 
 /**
