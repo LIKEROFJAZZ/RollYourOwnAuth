@@ -24,7 +24,7 @@ submitForm = ( e ) => {
     // prevent the browser from reloading page on submit
     e.preventDefault();
     // post request to specified endpoint and data we want to send
-    post( "/submit-email", { email } );
+    post( "/email", { email } );
 };
 
 /**
