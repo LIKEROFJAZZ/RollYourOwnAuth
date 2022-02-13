@@ -13,7 +13,7 @@ Note that you need npm and Node.js installed to use  Then from root directory, j
 http-server .
 ```
 
-and navigate to http://localhost:8080
+and navigate to http://localhost:8000
 
 ----
 
