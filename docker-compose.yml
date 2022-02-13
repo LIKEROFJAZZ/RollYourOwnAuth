@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   local:
-    image: nginx
+    image: python-nginx
     volumes:
       - ./templates:/etc/nginx/templates
     build:

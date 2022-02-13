@@ -2,7 +2,7 @@ const emailInput = document.getElementById('email-input');
 const submitBtn = document.getElementById('submit-btn');
 const form = document.getElementById('form');
 
-const host = 'http://127.0.0.1:8001';
+const host = 'http://127.0.0.1/api';
 // const host = window.location.protocol + window.location.host;
 
 let isValid = false;
