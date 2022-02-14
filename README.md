@@ -1,23 +1,4 @@
-# For development
-
-To set up a local ezpz webserver for development, download [a webserver like this](https://www.npmjs.com/package/http-server),
-or use some Python server or whatever. For 'http-server' as linked above, you can install it like so:
-
-```
-npm install -g http-server
-```
-
-Note that you need npm and Node.js installed to use  Then from root directory, just run:
-
-``` 
-http-server .
-```
-
-and navigate to http://localhost:8080
-
-----
-
-# NGINX setup
+# Running in Docker
 
 In root directory of project:
 ```

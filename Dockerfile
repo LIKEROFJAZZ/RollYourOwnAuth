@@ -1,13 +1,16 @@
 FROM elice/python-nginx:3.9
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY api/* ./
-COPY requirements.txt ./
+COPY requirements.txt requirements.txt
 
 COPY web /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY reverse-proxy.conf /etc/nginx/sites-available
+COPY reverse-proxy.conf /etc/nginx/sites-available/
+
+COPY start-services.sh ./
 
 RUN pip3 install --no-cache-dir -r requirements.txt
-CMD [ "python3", "flask_api.py" ]
+
+CMD ["sh", "start-services.sh"]
 
