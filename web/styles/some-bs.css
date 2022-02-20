@@ -1,0 +1,137 @@
+body {
+    background-image: url("../assets/bee-movie-3.jpeg");
+    cursor: url("../assets/maple-leaf.png") 2 2, crosshair;
+}
+
+form {
+    height: auto;
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 50px;
+    text-align: left;
+    position: relative;
+    animation: skew 10s linear 5s infinite;
+}
+
+.form-content {
+    z-index: 500;
+    position: absolute;
+    bottom: 100px;
+}
+
+.bees {
+    position: fixed;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 100;
+    animation: hueRotate 500ms linear infinite;
+}
+
+.animated-bee {
+    position: absolute;
+    width: auto;
+}
+
+button {
+    animation: skew 15s ease-in-out 5s infinite;
+}
+
+#bee-one {
+    animation: fly 5s linear infinite;
+    bottom: 25vh;
+    height: 190px;
+}
+
+#bee-two {
+    animation: fly 2s linear infinite;
+    top: 5vh;
+    height: 90px;
+}
+
+#bee-three {
+    animation: flyExtra 4s linear infinite;
+    top: 15vh;
+    height: 60px;
+    z-index: 200;
+}
+
+#bee-four {
+    height: 70px;
+    top: 30vh;
+    animation: fly 3s linear infinite;
+}
+
+@keyframes hueRotate {
+    0% {
+        filter: hue-rotate(0);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes fly {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes flyExtra {
+    0% {
+        left: -100px;
+        transform: translateY(300px);
+    }
+    30% {
+        left: 45%;
+        transform: translateY(-50px);
+        height: 80vh;
+    }
+    35% {
+        left: 40%;
+        transform: translateY(-5px);
+    }
+    40% {
+        left: 45%;
+        transform: translateY(10px);
+    }
+    42% {
+        left: 50%;
+        transform: translateY(-200px);
+    }
+    44% {
+        left: 55%;
+        transform: translateY(-77px);
+    }
+    46% {
+        left: 50%;
+        transform: translateY(80px);
+    }
+    48% {
+        left: 60%;
+        transform: translateY(-30px);
+    }
+    50% {
+        left: 55%;
+        transform: translateY(-80px);
+    }
+    65% {
+        transform: translateY(70vh);
+    }
+    100% {
+        left: 100%;
+        transform: translateY(60vh);
+    }
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0, 0);
+    }
+    100% {
+        transform: skew(360deg, 360deg);
+    }
+}
