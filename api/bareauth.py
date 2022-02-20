@@ -1,9 +1,4 @@
-#!/usr/bin/python
-# Filename: .py
-# Author: Luc Lachance
-# Course: ITSC203
-# Details:
-# Resources:
+
 
 import os
 #from dotenv import dotenv_values
