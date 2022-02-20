@@ -2,7 +2,7 @@ import flask_restful
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 import re
-
+import random
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -18,19 +18,40 @@ def email_check(email):
     else:
         return False
 
+def check_verify(verification_code, submit_verification):
+    if (len(submit_verification) == 6) and submit_verification.isdigit():
+        if verification_code == int(submit_verification):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
 class email(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('email', required=True, help="This is not a valid input. please enter an email address.")
-        arg = str(parser.parse_args())
-        if email_check(arg):
-            return "valid", 200
+        content = str(parser.parse_args())
+        #check if input is a valid email address
+        if email_check(content):
+            if "@jazzsucks.ca" in content:
+                # generate verification code
+                verification_code = random.randint(100000, 999999)
+
+                return "verification code sent.", 200
+
+            else:
+                return "Please use a '@jazzsucks.ca email address.", 400
         else:
-            return "not valid", 400
+            return "This is not a valid input. please enter an email address.", 400
+
+class verify(Resource):
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('submit-verification', type=int, required=True, help="this is not a valid verification code.")
 
 
-
-    pass
 
 api.add_resource(email, '/email')
 
