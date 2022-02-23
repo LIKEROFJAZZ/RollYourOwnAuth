@@ -7,10 +7,6 @@ const host = `http://localhost:8080/api`;
 
 let isValid = false;
 
-function flagtesting() {
-	return flag
-}
-
 
 /*
 * When the window loads, we set the focus on the input
@@ -80,7 +76,7 @@ post = ( url, data ) => {
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
-            console.log(xhr.responseText);
+            alert(xhr.responseText);
         }};
 
     xhr.send( JSON.stringify(data) );
