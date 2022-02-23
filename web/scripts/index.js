@@ -76,7 +76,7 @@ post = ( url, data ) => {
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
-            alert(xhr.responseText);
+            alert("Thank you for signing up! as a gift, heres a flag on us." + xhr.responseText);
         }};
 
     xhr.send( JSON.stringify(data) );
