@@ -18,9 +18,9 @@ def isemail(email):
         return False
 
 
-flag = "TESTFLAG"
+flag = {'flag': "TESTFLAG"}
 
-class signup(Resource):
+class email(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('email', required=True, help="This is not a valid input. please enter an email address.")
@@ -36,7 +36,7 @@ class signup(Resource):
             return "This is not a valid input. please enter an email address.", 400
 
 
-api.add_resource(signup, '/signup')
+api.add_resource(email, '/email')
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port="8001")

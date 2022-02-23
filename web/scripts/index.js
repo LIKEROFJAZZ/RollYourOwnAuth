@@ -7,6 +7,11 @@ const host = `http://localhost:8080/api`;
 
 let isValid = false;
 
+function flagtesting() {
+	return flag
+}
+
+
 /*
 * When the window loads, we set the focus on the input
 * field right away for user convenience.
